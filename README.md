@@ -1,3 +1,8 @@
+To have Tensor-Flow function, run this line in the terminal in the folder with the code:
+
+npm install @tensorflow/tfjs @tensorflow-models/coco-ssd
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
