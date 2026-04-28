@@ -114,6 +114,15 @@ body {
   text-align: center;
 }
 
+.upload-content h2 {
+  margin: 0 0 1rem 0;
+}
+
+.upload-content input[type="file"] {
+  display: block;
+  margin: 0 auto;
+}
+
 .upload-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
