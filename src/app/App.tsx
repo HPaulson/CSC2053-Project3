@@ -151,6 +151,8 @@ function App() {
 
 
   return (
+
+    /* Header of Whole Page */
     <div className="app">
       <header className="header">
         <div className="header-content">
@@ -159,7 +161,7 @@ function App() {
       </header>
 
       <main className="main-content">
-        {}
+        
         <div className="panel left-panel">
           {imageUrl === "" ? (
             //Beginning prompting user to pick an image
@@ -176,8 +178,8 @@ function App() {
           ) : (
             //After upload
             <div className="canvas-container">
-              {}
-              {}
+              
+              
               <img
                 ref={imageRef}
                 src={imageUrl}
@@ -190,6 +192,7 @@ function App() {
               <div className="button-group">
                 <button
                   onClick={() => {
+                    // This button clears the UI
                     setImageUrl("");
                     setObjectsList([]);
                   }}
@@ -201,10 +204,11 @@ function App() {
             </div>
           )}
         </div>
-        {}
+         
+         /* This side bar only comes up once an image is put in */
         {imageUrl !== "" && (
           <div className="panel right-panel">
-            {}
+            
             
             <div className="control-group">
               <label>Confidence: {Math.round(minConfidence * 100)}%</label>
@@ -219,15 +223,15 @@ function App() {
               />
             </div>
 
-            {}
+            // this shows how many objects are above the current set confidence threshold
             <div className="stat">
               <strong>{countFiltered}</strong> Objects Found
             </div>
 
-            {}
+            
             <div className="predictions-list">
               {objectsList.map((obj, index) => {
-                
+                // This makes sure list matches whats on the picture
                 if (obj.score < minConfidence) {
                   return null;
                 }
