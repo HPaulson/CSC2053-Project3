@@ -205,10 +205,9 @@ function App() {
           )}
         </div>
          
-         /* This side bar only comes up once an image is put in */
+         
         {imageUrl !== "" && (
           <div className="panel right-panel">
-            
             
             <div className="control-group">
               <label>Confidence: {Math.round(minConfidence * 100)}%</label>
@@ -223,7 +222,7 @@ function App() {
               />
             </div>
 
-            // this shows how many objects are above the current set confidence threshold
+            
             <div className="stat">
               <strong>{countFiltered}</strong> Objects Found
             </div>
